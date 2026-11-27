@@ -1,0 +1,9 @@
+$kind: http-request
+name: New Request
+url: "{{base_url}}/admin/orders"
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{admin_token}}"
+order: 7554

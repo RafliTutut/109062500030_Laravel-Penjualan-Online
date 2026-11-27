@@ -1,0 +1,10 @@
+$kind: collection
+variables:
+  base_url: ""
+  admin_token: ""
+  order_id: ""
+  customer_token: ""
+scripts:
+  - type: http:beforeRequest
+    code: "pm.request.headers.upsert({ key: 'Accept', value: 'application/json' });"
+    language: text/javascript

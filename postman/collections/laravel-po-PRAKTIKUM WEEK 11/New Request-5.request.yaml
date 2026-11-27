@@ -1,0 +1,32 @@
+$kind: http-request
+name: New Request
+url: "{{base_url}}/checkout"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{   \r
+
+    \    \"recipient_name\": \"\",   \r
+
+    \    \"phone\": \"081234567890\",   \r
+
+    \    \"address\": \"Jl. Praktikum No. 10, Purwokerto\",   \r
+
+    \    \"shipping_service_id\": 10,   \r
+
+    \        \"items\": [     \r
+
+    \            {\"product_id\": 2, \"quantity\": 100},     \r
+
+    \            {\"product_id\": 2, \"quantity\": 1}   \r
+
+    \        ]\r
+
+    } "
+auth:
+  type: bearer
+  credentials:
+    token: "{{customer_token}}"
+order: 5554

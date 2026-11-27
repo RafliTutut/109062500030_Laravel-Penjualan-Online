@@ -1,0 +1,7 @@
+$kind: http-request
+name: New Request
+url: "{{base_url}}/admin/orders/{{order_id}}/confirm"
+method: PATCH
+auth:
+  type: bearer
+order: 8554

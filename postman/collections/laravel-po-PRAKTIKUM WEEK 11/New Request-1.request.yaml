@@ -1,0 +1,24 @@
+$kind: http-request
+name: New Request
+url: "{{base_url}}/auth/login"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{   \r
+
+    \    \"email\": \"titut@customer.com\",   \r
+
+    \    \"password\": \"12345678\",   \r
+
+    \    \"device_name\": \"Postman Praktikum\" \r
+
+    } "
+scripts:
+  - type: afterResponse
+    code: "const json = pm.response.json(); \r
+
+      pm.collectionVariables.set('customer_token', json.access_token); "
+    language: text/javascript
+order: 2000
